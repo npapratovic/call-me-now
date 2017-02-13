@@ -1,0 +1,14 @@
+DE=de-poziv
+AT=
+HU=hu-poziv
+ME=poziv
+NL=poziv
+NO=poziv
+SE=poziv
+MK=poziv
+CA=poziv
+SI=poziv
+RS=poziv
+CH=poziv
+HR=Nazovite nas!
+STANDARD=poziv
