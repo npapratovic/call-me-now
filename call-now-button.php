@@ -207,8 +207,8 @@ if(get_option('cnb') && !is_admin()) {
 			while(!feof($phone_file)) 
 			{
 		 	 	$line = fgets($phone_file);
-
-				if (substr_count($line, $country_code) > 0) {
+				 
+				if (strpos($line, $country_code) !== false) { 
 				    $phone = substr($line, strpos($line, "=") + 1);    
 				    $phonefound = true;
 				}
@@ -227,14 +227,14 @@ if(get_option('cnb') && !is_admin()) {
 
 			if (file_exists($text_file_path)) {
 				
-			   $text_file = fopen($text_file_url, "r") or exit("Unable to open text file!");
+			   $text_file = fopen($text_file_path, "r") or exit("Unable to open text file!");
 
 				//Find a line of the file until the end is reached
 				while(!feof($text_file)) 
 				{
 			 	 	$line = fgets($text_file);
-
-					if (substr_count($line, $country_code) > 0) {
+				 
+				        if (strpos($line, $country_code) !== false) { 
 					    $text = substr($line, strpos($line, "=") + 1);    
 					    $textfound = true;
 					}
